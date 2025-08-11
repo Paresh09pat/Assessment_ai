@@ -23,6 +23,14 @@ const preview = {
         },
       ],
     },
+    // Make Storybook more permissive for embedding
+    docs: {
+      iframeHeight: '600px',
+    },
+    // Allow Storybook to be embedded
+    viewport: {
+      defaultViewport: 'responsive',
+    },
   },
 };
 
