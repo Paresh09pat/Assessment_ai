@@ -1,6 +1,6 @@
 [build]
   # Build command for production - builds both app and Storybook
-  command = "npm run build:full"
+  command = "npm run build:full || npm run build"
   
   # Directory containing the built files
   publish = "dist"
@@ -33,10 +33,23 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "ALLOWALL"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Specific override for Storybook to ensure frame compatibility
+[[headers]]
+  for = "/storybook"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/storybook/"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
 
 # Cache static assets
 [[headers]]
