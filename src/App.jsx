@@ -34,6 +34,19 @@ function App() {
             <p className="text-gray-600 dark:text-gray-400 mt-2">
               Advanced AI model interface with customizable parameters and templates
             </p>
+            <div className="mt-2">
+              <a
+                href="/storybook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                View Component Library
+              </a>
+            </div>
           </header>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
