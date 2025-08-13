@@ -2,12 +2,12 @@ import { useState } from 'react'
 import { defaultParameters } from '../data/mockData'
 
 const ParameterSlider = ({ label, value, min, max, step, onChange, description }) => (
-  <div className="mb-4">
+  <div className="mb-4 ">
     <div className="flex items-center justify-between mb-2">
       <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
         {label}
       </label>
-      <span className="text-sm text-gray-500 dark:text-gray-400">
+      <span className="text-sm text-gray-500 dark:text-gray-400 ">
         {value}
       </span>
     </div>
